@@ -10,16 +10,17 @@ apt-get install build-essential libffi-dev git pkg-config python3 gcc-arm-none-e
 
 ```
 cd ports/stm32
-make BOARD=NUCLEO_L476RG submodules
-make BOARD=NUCLEO_L476RG
+make BOARD=WEACT_F411_BLACKPILL submodules
+make BOARD=WEACT_F411_BLACKPILL
 ```
 
-Burn
+Burn & run
 
 ```
 exit docker
 st-flash erase
-st-flash --format ihex write ports/stm32/build-NUCLEO_L476RG/firmware.hex
+st-flash --format ihex write ports/stm32/build-WEACT_F411_BLACKPILL/firmware.hex
+screen /dev/tty.usbmodem3467387D32332
 ```
 
 # original
