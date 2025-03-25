@@ -1,3 +1,21 @@
+# Semiblock
+
+```
+docker run -it --name micropython -v `pwd`:/micropython ubuntu
+apt-get update
+apt-get install build-essential libffi-dev git pkg-config python3 gcc-arm-none-eabi libnewlib-arm-none-eabi
+```
+
+## Build stm32
+
+```
+cd ports/stm32
+make BOARD=NUCLEO_L476RG submodules
+make BOARD=NUCLEO_L476RG
+```
+
+# original
+
 [![Unix CI badge](https://github.com/micropython/micropython/actions/workflows/ports_unix.yml/badge.svg)](https://github.com/micropython/micropython/actions?query=branch%3Amaster+event%3Apush) [![STM32 CI badge](https://github.com/micropython/micropython/actions/workflows/ports_stm32.yml/badge.svg)](https://github.com/micropython/micropython/actions?query=branch%3Amaster+event%3Apush) [![Docs CI badge](https://github.com/micropython/micropython/actions/workflows/docs.yml/badge.svg)](https://docs.micropython.org/) [![codecov](https://codecov.io/gh/micropython/micropython/branch/master/graph/badge.svg?token=I92PfD05sD)](https://codecov.io/gh/micropython/micropython)
 
 The MicroPython project
